@@ -1,12 +1,30 @@
-exports.getUsers = (req, res, next) => {
-  res.send('all users')
+const User = require('../models/User')
+
+exports.getUsers = async (req, res, next) => {
+  try {
+    const users = await User.find()
+    res.send(users)
+  } catch (error) {
+    console.log(error.message)
+  }
 }
 exports.getUser = (req, res, next) => {
   res.send("single user with id")
 }
-exports.addUser = (req, res, next) => {
-  res.send("the user added the database")
+
+// creates a new user and adds in the data base
+exports.createUser = async (req, res, next) => {
+  const { firstName, lastName, email, ageGroup, profession, skills } = req.body
+  try {
+    const user = await User.create({
+      firstName, lastName, email, ageGroup, profession, skills
+    })
+    res.send(user)
+  } catch (error) {
+    console.log(error.message)
+  }
 }
+
 exports.removeUser = (req, res, next) => {
   res.send("user deleted")
 }
