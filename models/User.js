@@ -16,16 +16,12 @@ const userSchema = new mongoose.Schema({
   },
   profession: {
     type: String,
-    required: true
   },
-  ageGroup: {
+  location: {
     type: String,
-    required: true
-
   },
   skills: {
     type: String,
-    required: true
   }
 })
 

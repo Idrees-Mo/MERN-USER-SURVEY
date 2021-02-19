@@ -14,12 +14,12 @@ exports.getUser = (req, res, next) => {
 
 // creates a new user and adds in the data base
 exports.createUser = async (req, res, next) => {
-  const { firstName, lastName, email, ageGroup, profession, skills } = req.body
+  const { firstName, lastName, email, location, profession, skills } = req.body
   try {
     const user = await User.create({
-      firstName, lastName, email, ageGroup, profession, skills
+      firstName, lastName, email, location, profession, skills
     })
-    res.send(user)
+    res.status(201).json(user)
   } catch (error) {
     console.log(error.message)
   }

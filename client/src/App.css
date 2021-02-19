@@ -1,0 +1,23 @@
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+.form {
+  max-width: 560px;;
+  min-height: 360px;
+  margin: auto;
+  text-align: center;
+  background-color:rgba(220, 244, 250, 0.576);
+}
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  }
+.btn {
+  margin-top: 10px;
+}

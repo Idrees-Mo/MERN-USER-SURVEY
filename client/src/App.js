@@ -1,14 +1,18 @@
-import UserList from './components/UserList'
+import UserForm from './components/userForm/UserForm'
 import './App.css';
-import UserForm from './components/UserForm';
+import UserList from './components/user/UserList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>user survye</h1>
-      <UserForm />
-      <UserList />
+    <div className="container">
+      <div className="form">
+        <UserForm />
+      </div>
+      <div className="main">
+        <UserList />
+      </div>
     </div>
+
   );
 }
 
