@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+
 import UserPersonal from './UserPersonal'
 import UserProfessional from './UserProfessional'
 import UserConfirm from './UserConfirm'
 import Success from './Success'
 
 const UserForm = () => {
+
   const [state, setState] = useState({
     step: 1,
     firstName: '',

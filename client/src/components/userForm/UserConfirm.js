@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { context } from '../../context/userContext/UserState'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { AppBar, List, ListItem, RaisedButton } from 'material-ui'
 
 const UserConfirm = ({ nextStep, previousStep, values }) => {
+  const { addUser } = useContext(context)
   const { firstName, lastName, email, profession, location, skills } = values
   const next = (e) => {
     e.preventDefault()
+    addUser(values)
     nextStep()
   }
   const last = (e) => {

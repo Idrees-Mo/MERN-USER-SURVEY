@@ -25,11 +25,27 @@ const UserState = (props) => {
       })
     }
   }
+  const addUser = async (user) => {
+    console.log(user)
+    try {
+      const res = await axios.post('/user', { firstName: user.firstName, lastName: user.lastName, email: user.email })
+      console.log(res)
+      dispatch({
+        type: 'ADD_USER',
+        payload: res.data
+      })
+
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
   return (
     <context.Provider value={{
       users: state.users,
       error: state.error,
-      fetchUsers
+      fetchUsers,
+      addUser
     }}>
       {props.children}
     </context.Provider>

@@ -28,7 +28,8 @@ const UserPersonal = ({ nextStep, values, handleChange }) => {
           hintText="Enter your email"
           floatingLabelText="Email"
           onChange={handleChange('email')}
-          defaultValue={values.email} />
+          defaultValue={values.email}
+          type="email" />
       </>
       <br />
       <RaisedButton
