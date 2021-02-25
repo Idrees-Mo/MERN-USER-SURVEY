@@ -17,22 +17,22 @@ const UserProfessional = ({ nextStep, previousStep, values, handleChange }) => {
       <>
         <AppBar title="Professional Information" />
         <TextField
-          hintText="Your Profession"
+          hintText="Enter your profession"
           floatingLabelText="Your Profession"
           onChange={handleChange('profession')}
           defaultValue={values.profession} />
+        <br />
+        <TextField
+          hintText="Enter your education"
+          floatingLabelText="Education"
+          onChange={handleChange('skills')}
+          defaultValue={values.skills} />
         <br />
         <TextField
           hintText="Enter your location"
           floatingLabelText="Location"
           onChange={handleChange('location')}
           defaultValue={values.location} />
-        <br />
-        <TextField
-          hintText="Enter your expertise"
-          floatingLabelText="Skills"
-          onChange={handleChange('skills')}
-          defaultValue={values.skills} />
       </>
       <br />
       <RaisedButton

@@ -13,14 +13,14 @@ const UserItem = ({ user: { firstName,
     <MuiThemeProvider>
       <>
         <Card style={{ margin: '0.6rem' }} >
-          <div style={{ width: '260px', textAlign: 'center', fontSize: '26px', backgroundColor: '#00BCD4', padding: '1px', color: '#fff' }}>
-            <p>{`${firstName} ${lastName}`}</p>
+          <div style={{ minWidth: '340px', textAlign: 'center', backgroundColor: '#00BCD4', padding: '1px', color: '#fff' }}>
+            <h1 style={{ color: '#333', paddingBottom: '0' }}>{`${firstName} ${lastName}`}</h1>
+            <p style={{ fontSize: '20px' }}>{profession}</p>
           </div>
-          <p>{profession}</p>
+          <p style={{ fontSize: '18px', padding: '0 6px' }}>Email: <spn style={{ fontSize: '16px', }} >{email}</spn></p>
+          <p style={{ fontSize: '18px', padding: '0 6px' }}>Education: <spn style={{ fontSize: '16px', }} >{skills}</spn></p>
+          <p style={{ fontSize: '18px', padding: '0 6px' }}>Location: <spn style={{ fontSize: '16px', }} >{location}</spn></p>
 
-          <p>{email}</p>
-          <p>{skills}</p>
-          <p>{location}</p>
         </Card>
       </>
     </MuiThemeProvider>

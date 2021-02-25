@@ -14,7 +14,7 @@ exports.getUser = (req, res, next) => {
 
 // creates a new user and adds in the data base
 exports.createUser = async (req, res, next) => {
-  const { firstName, lastName, email, location, profession, skills } = req.body
+  const { firstName, lastName, email, location, profession, skills } = req.body.user
   try {
     const user = await User.create({
       firstName, lastName, email, location, profession, skills

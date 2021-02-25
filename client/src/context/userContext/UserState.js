@@ -26,17 +26,21 @@ const UserState = (props) => {
     }
   }
   const addUser = async (user) => {
-    console.log(user)
     try {
-      const res = await axios.post('/user', { firstName: user.firstName, lastName: user.lastName, email: user.email })
-      console.log(res)
+      const res = await axios.post('/user', { user })
       dispatch({
         type: 'ADD_USER',
         payload: res.data
       })
+      dispatch({
+        type: 'REMOVE_ERROR'
+      })
 
     } catch (error) {
-      console.log(error.message)
+      dispatch({
+        type: 'ADD_ERROR',
+        payload: error.message
+      })
     }
   }
 

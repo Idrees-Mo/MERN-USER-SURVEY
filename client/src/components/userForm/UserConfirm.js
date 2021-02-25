@@ -5,6 +5,7 @@ import { AppBar, List, ListItem, RaisedButton } from 'material-ui'
 
 const UserConfirm = ({ nextStep, previousStep, values }) => {
   const { addUser } = useContext(context)
+
   const { firstName, lastName, email, profession, location, skills } = values
   const next = (e) => {
     e.preventDefault()
