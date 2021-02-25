@@ -3,17 +3,20 @@ body {
   }
  
 .container {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   font-family: Verdana, Tahoma, sans-serif;
 
 }
 .form {
-  max-width: 760px;;
+  max-width: 760px;
+  min-width: 360px;
   min-height: 360px;
   margin: auto;
+  margin-bottom: 12px;
   text-align: center;
   background-color:rgba(220, 244, 250, 0.576);
+
 }
 .main {
   width: 100%;
